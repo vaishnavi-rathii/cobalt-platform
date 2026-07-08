@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #f5f7fb;
+
+  --panel: #0a0c10;
+  --panel-border: #1b2130;
+
+  --blue-electric: #2f6bff;
+  --blue-cobalt: #1949e6;
+  --blue-cyan: #22d3ee;
+  --blue-navy: #0a1230;
+  --blue-light: #8fb8ff;
+  --blue-mist: #eaf1ff;
+
+  --text-muted: #93a0b8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-panel: var(--panel);
+  --color-panel-border: var(--panel-border);
+  --color-blue-electric: var(--blue-electric);
+  --color-blue-cobalt: var(--blue-cobalt);
+  --color-blue-cyan: var(--blue-cyan);
+  --color-blue-navy: var(--blue-navy);
+  --color-blue-light: var(--blue-light);
+  --color-blue-mist: var(--blue-mist);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(143, 184, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(143, 184, 255, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #8fb8ff 0%, #2f6bff 50%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #2f6bff 0%, #22d3ee 100%);
+}
+
+.glow-blue {
+  background: radial-gradient(closest-side, rgba(47, 107, 255, 0.45), rgba(34, 211, 238, 0.12) 55%, transparent 75%);
+  filter: blur(40px);
+}
+
+::selection {
+  background: rgba(47, 107, 255, 0.35);
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
